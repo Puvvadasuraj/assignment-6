@@ -1,0 +1,45 @@
+.similarJobContainer {
+  background-color: #202020;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  margin: 12px;
+  border-radius: 12px;
+  width: 400px;
+}
+
+.aiStar {
+  color: #fbbf24;
+}
+
+.similarImgContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.starRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  line-height: 0px;
+}
+
+.similarJobImg {
+  height: 120px;
+  padding: 25px;
+}
+
+.similarLocationContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.similarLocation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

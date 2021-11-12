@@ -1,0 +1,142 @@
+.descriptionContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+  color: white;
+  padding: 50px;
+  min-height: 100vh;
+}
+
+.failure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.failureDescription {
+  color: #7e858e;
+  font-weight: bold;
+  font-family: 'Roboto';
+}
+
+.failureBut {
+  background-color: #6366f1;
+  color: #ffffff;
+  font-weight: bold;
+  font-family: 'Roboto';
+  padding: 12px;
+  padding-right: 25px;
+  padding-left: 25px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.successContainer {
+  background-color: #121212;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 25px;
+}
+
+.logo {
+  height: 60px;
+  padding-right: 15px;
+}
+
+.logoHeadContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.starContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  line-height: 0px;
+}
+
+.logoHead {
+  line-height: 0px;
+}
+
+.starItem {
+  padding-left: 12px;
+}
+
+.locationContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.locationItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.locationImg {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.visitContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.visitIconContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #6366f1;
+  font-weight: bold;
+}
+
+.visit {
+  padding-right: 12px;
+}
+
+.ulContainer {
+  list-style-type: none;
+  padding-left: 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 12px;
+}
+
+.lifeAtCompanyContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+}
+
+.lifeAtCompanyPara {
+  padding: 0px;
+  font-weight: bold;
+  padding-right: 12px;
+}
+
+.ulContainerSimilar {
+  list-style-type: none;
+  padding-left: 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.jobLink {
+  text-decoration: none;
+}

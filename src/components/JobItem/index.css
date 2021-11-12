@@ -1,0 +1,83 @@
+.itemContainer {
+  padding: 10px;
+  padding-left: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #202020;
+  margin: 25px;
+  border-radius: 12px;
+  margin-left: 0px;
+}
+
+.ItemLogoImg {
+  height: 50px;
+  padding-right: 20px;
+}
+
+.itemLogoHead {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.star {
+  color: #fbbf24;
+}
+.ratingContainer {
+  line-height: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.itemHead {
+  color: #f1f5f9;
+  line-height: 0px;
+  font-family: 'Roboto';
+}
+
+.locationBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.locationInnerBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.description {
+  font-family: 'roboto';
+  font-weight: bold;
+  color: #f1f5f9;
+}
+
+.descriptionHead {
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-weight: bold;
+}
+
+.location {
+  color: #2c364c;
+  font-weight: bold;
+  font-family: 'Roboto';
+  padding-right: 12px;
+  padding-left: 12px;
+}
+
+.linkItem {
+  text-decoration: none;    
+}
+.rat {
+  color: #f1f5f9;
+}
+.locationIcon {
+  color: #f1f5f9;
+}

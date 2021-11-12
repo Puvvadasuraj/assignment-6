@@ -1,0 +1,13 @@
+.skillImg {
+  height: 70px;
+  padding-right: 30px;
+}
+
+.skillContainer {
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 70px;
+  line-height: 0px;
+}

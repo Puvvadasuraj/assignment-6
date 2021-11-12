@@ -1,0 +1,22 @@
+.hr {
+  width: 20vw;
+  padding-left: 0px;
+  margin-top: 30px;
+  margin-left: 0px;
+}
+
+.liItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.ulContainer {
+  list-style-type: none;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+.check {
+  margin-right: 25px;
+}
