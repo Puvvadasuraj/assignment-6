@@ -45,7 +45,7 @@ const FilterIcons = props => {
       <ul className="ulContainer">
         {salaryRangesList.map(salaryDetails => {
           const check = item => {
-            console.log(item)
+            salaryChange(item.id)
           }
           return (
             <li className="liItem" key={salaryDetails.salaryRangeId}>

@@ -39,8 +39,8 @@ class Jobs extends Component {
     }
   }
 
-  changeSalary = event => {
-    this.setState({salary: event.target.value}, this.getJobDetails())
+  changeSalary = salaryItem => {
+    this.setState({salary: salaryItem.salaryRangeId}, this.getJobDetails())
   }
 
   getJobDetails = async () => {
