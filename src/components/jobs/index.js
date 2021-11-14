@@ -30,7 +30,6 @@ class Jobs extends Component {
 
   changeSearchInput = event => {
     this.setState({searchInput: event.target.value})
-    console.log(event.target.value)
   }
 
   onEnter = event => {
@@ -46,7 +45,6 @@ class Jobs extends Component {
   getJobDetails = async () => {
     this.setState({apiStatus: apiConstants.loading})
     const {searchInput, salary, employmentType} = this.state
-    console.log(searchInput)
     const jwtToken = Cookies.get('jwt_token')
     const apiUrl = `https://apis.ccbp.in/jobs?employment_type=${employmentType}&minimum_package=${salary}&search=${searchInput}`
     const options = {
@@ -143,7 +141,7 @@ class Jobs extends Component {
         <div className="jobsContainer">
           <div className="profileFilter">
             <JobProfile />
-            <FilterIcons />
+            <FilterIcons salaryChange={this.changeSalary} />
           </div>
           <div className="jobItemContainer">
             <div className="searchBox">
@@ -153,7 +151,6 @@ class Jobs extends Component {
                 placeholder="Search"
                 onChange={this.changeSearchInput}
                 onKeyDown={this.onEnter}
-                salaryChange={this.changeSalary}
               />
               <div className="searchElement">
                 <BiSearch />

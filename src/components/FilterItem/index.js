@@ -42,17 +42,17 @@ const FilterIcons = props => {
   const salaryItem = () => {
     const {salaryChange} = props
     return (
-      <ul className="ulContainer">
+      <ul className="filterUlContainer">
         {salaryRangesList.map(salaryDetails => {
           const check = item => {
-            salaryChange(item.id)
+            console.log(item)
           }
           return (
             <li className="liItem" key={salaryDetails.salaryRangeId}>
               <input
                 type="radio"
                 className="check"
-                onClick={check(salaryDetails.salaryRangeId)}
+                onCheck={check(salaryDetails.salaryRangeId)}
               />
               <p>{salaryDetails.label}</p>
             </li>
@@ -63,7 +63,7 @@ const FilterIcons = props => {
   }
 
   const employmentItem = () => (
-    <ul className="ulContainer">
+    <ul className="filterUlContainer">
       <li key={employmentTypesList[0].employmentTypeId} className="liItem">
         <input type="checkBox" className="check" />
         <p>{employmentTypesList[0].label}</p>
