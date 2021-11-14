@@ -33,6 +33,7 @@
 }
 
 .searchElement {
+  border: none;
   background-color: #7e858e;
   height: 25px;
   padding-top: 16px;

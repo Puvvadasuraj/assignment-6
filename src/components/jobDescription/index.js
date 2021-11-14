@@ -108,7 +108,11 @@ class JobDescription extends Component {
       <>
         <div className="successContainer">
           <div className="logoHeadContainer">
-            <img src={companyLogoUrl} alt={employmentType} className="logo" />
+            <img
+              src={companyLogoUrl}
+              alt="job details company logo"
+              className="logo"
+            />
             <div>
               <h1 className="logoHead">{title}</h1>
               <div className="starContainer">
@@ -128,22 +132,22 @@ class JobDescription extends Component {
           </div>
           <hr />
           <div className="visitContainer">
-            <p>Description</p>
+            <h1>Description</h1>
             <div className="visitIconContainer">
               <a href={companyWebsiteUrl} className="visit">
-                visit
+                Visit
               </a>
               <FiExternalLink />
             </div>
           </div>
           <p>{jobDescription}</p>
-          <p>Skills</p>
+          <h1>Skills</h1>
           <ul className="ulContainer">
             {skills.map(item => (
               <SkillItem singleSkill={item} key={item.name} />
             ))}
           </ul>
-          <p>Life at Company</p>
+          <h1>Life at Company</h1>
           <div className="lifeAtCompanyContainer">
             <p className="lifeAtCompanyPara">{description}</p>
             <img src={imageUrl} alt="Life At Company" />

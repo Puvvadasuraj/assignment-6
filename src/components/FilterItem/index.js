@@ -53,8 +53,9 @@ const FilterIcons = props => {
                 type="radio"
                 className="check"
                 onCheck={check(salaryDetails.salaryRangeId)}
+                id={salaryDetails.label}
               />
-              <p>{salaryDetails.label}</p>
+              <label htmlFor={salaryDetails.label}>{salaryDetails.label}</label>
             </li>
           )
         })}
@@ -65,20 +66,44 @@ const FilterIcons = props => {
   const employmentItem = () => (
     <ul className="filterUlContainer">
       <li key={employmentTypesList[0].employmentTypeId} className="liItem">
-        <input type="checkBox" className="check" />
-        <p>{employmentTypesList[0].label}</p>
+        <input
+          type="checkBox"
+          className="check"
+          id={employmentTypesList[0].label}
+        />
+        <label htmlFor={employmentTypesList[0].label}>
+          {employmentTypesList[0].label}
+        </label>
       </li>
       <li key={employmentTypesList[1].employmentTypeId} className="liItem">
-        <input type="checkBox" className="check" />
-        <p>{employmentTypesList[1].label}</p>
+        <input
+          type="checkBox"
+          className="check"
+          id={employmentTypesList[1].label}
+        />
+        <label htmlFor={employmentTypesList[1].label}>
+          {employmentTypesList[1].label}
+        </label>
       </li>
       <li key={employmentTypesList[2].employmentTypeId} className="liItem">
-        <input type="checkBox" className="check" />
-        <p>{employmentTypesList[2].label}</p>
+        <input
+          type="checkBox"
+          className="check"
+          id={employmentTypesList[2].label}
+        />
+        <label htmlFor={employmentTypesList[2].label}>
+          {employmentTypesList[2].label}
+        </label>
       </li>
       <li key={employmentTypesList[3].employmentTypeId} className="liItem">
-        <input type="checkBox" className="check" />
-        <p>{employmentTypesList[3].label}</p>
+        <input
+          type="checkBox"
+          className="check"
+          id={employmentTypesList[3].label}
+        />
+        <label htmlFor={employmentTypesList[3].label}>
+          {employmentTypesList[3].label}
+        </label>
       </li>
       <hr className="hr" />
     </ul>
@@ -87,7 +112,7 @@ const FilterIcons = props => {
   return (
     <div>
       <hr className="hr" />
-      <h1>Types of Employment</h1>
+      <h1>Type of Employment</h1>
       {employmentItem()}
       <h1>Salary Range</h1>
       {salaryItem()}

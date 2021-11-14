@@ -51,7 +51,7 @@ class JobProfile extends Component {
     const {name, profileImageUrl, shortBio} = profile
     return (
       <div className="jobProfileContainer">
-        <img src={profileImageUrl} alt={name} />
+        <img src={profileImageUrl} alt="profile" />
         <h1 className="profileHead">{name}</h1>
         <p className="profilePara">{shortBio}</p>
       </div>

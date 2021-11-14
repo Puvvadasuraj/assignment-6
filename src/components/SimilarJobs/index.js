@@ -16,7 +16,11 @@ const SimilarItem = props => {
   return (
     <div className="similarJobContainer">
       <div className="similarImgContainer">
-        <img src={companyLogoUrl} alt={title} className="similarJobImg" />
+        <img
+          src={companyLogoUrl}
+          alt="similar job company logo"
+          className="similarJobImg"
+        />
         <div>
           <h1>{title}</h1>
           <div className="starRow">

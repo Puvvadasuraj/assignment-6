@@ -33,9 +33,7 @@ class Jobs extends Component {
   }
 
   onEnter = event => {
-    if (event.key === 'Enter') {
-      this.getJobDetails()
-    }
+    this.getJobDetails()
   }
 
   changeSalary = salaryItem => {
@@ -89,7 +87,7 @@ class Jobs extends Component {
         />
         <h1>No Jobs Found</h1>
         <p className="noJobsDescription">
-          We could not find jobs.Try other Filters.
+          We could not find any jobs. Try other filters
         </p>
       </div>
     )
@@ -150,11 +148,15 @@ class Jobs extends Component {
                 className="searchInput"
                 placeholder="Search"
                 onChange={this.changeSearchInput}
-                onKeyDown={this.onEnter}
               />
-              <div className="searchElement">
+              <button
+                type="button"
+                testid="searchButton"
+                className="searchElement"
+                onClick={this.onEnter}
+              >
                 <BiSearch />
-              </div>
+              </button>
             </div>
             {this.renderCase()}
           </div>

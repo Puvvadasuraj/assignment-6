@@ -1,8 +1,5 @@
 import {Link, withRouter} from 'react-router-dom'
 import Cookies from 'js-cookie'
-import {FaHome} from 'react-icons/fa'
-import {GiSuitcase} from 'react-icons/gi'
-import {BiExit} from 'react-icons/bi'
 import './index.css'
 
 const Header = props => {
@@ -30,9 +27,11 @@ const Header = props => {
             <li className="profile">Jobs</li>
           </Link>
         </ul>
-        <button type="button" className="logout" onClick={onLogout}>
-          Logout
-        </button>
+        <li>
+          <button type="button" className="logout" onClick={onLogout}>
+            Logout
+          </button>
+        </li>
       </div>
       <div className="mobileContent">
         <Link to="/" className="link">
