@@ -9,6 +9,8 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  cursor: pointer;
+  outline: none;
 }
 
 .filterUlContainer {
@@ -19,4 +21,11 @@
 
 .check {
   margin-right: 25px;
+  outline: none;
+  cursor: pointer;
+}
+
+.labelItem {
+  cursor: pointer;
+  outline: none;
 }

@@ -11,7 +11,7 @@ const RandomPath = () => (
       />
       <h1>Page Not Found</h1>
       <p className="randomPara">
-        we`re sorry,the page you requested could not found.
+        we’re sorry, the page you requested could not be found
       </p>
     </div>
   </>

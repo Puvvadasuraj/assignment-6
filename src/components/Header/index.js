@@ -1,5 +1,8 @@
 import {Link, withRouter} from 'react-router-dom'
 import Cookies from 'js-cookie'
+import {AiFillHome} from 'react-icons/ai'
+import {FaSuitcase} from 'react-icons/fa'
+import {BiExit} from 'react-icons/bi'
 import './index.css'
 
 const Header = props => {
@@ -11,48 +14,56 @@ const Header = props => {
 
   return (
     <nav>
-      <div className="headBox">
-        <Link to="/" className="link">
-          <img
-            src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
-            alt="website logo"
-            className="headerImg"
-          />
-        </Link>
-        <ul className="butBox">
+      <ul className="headBox">
+        <li>
           <Link to="/" className="link">
-            <li className="profile">Home</li>
+            <img
+              src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
+              alt="website logo"
+              className="headerImg"
+            />
           </Link>
-          <Link to="/jobs" className="link">
-            <li className="profile">Jobs</li>
-          </Link>
-        </ul>
+        </li>
+        <li>
+          <div className="butBox">
+            <Link to="/" className="link">
+              <li className="profile">Home</li>
+            </Link>
+            <Link to="/jobs" className="link">
+              <li className="profile">Jobs</li>
+            </Link>
+          </div>
+        </li>
         <li>
           <button type="button" className="logout" onClick={onLogout}>
             Logout
           </button>
         </li>
-      </div>
-      <div className="mobileContent">
-        <Link to="/" className="link">
-          <img
-            src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
-            alt="website logo"
-            className="headerImg"
-          />
-        </Link>
-        <ul className="butBox">
+      </ul>
+      <ul className="mobileBox">
+        <li>
           <Link to="/" className="link">
-            <li className="profile">Home</li>
+            <img
+              src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
+              alt="website logo"
+              className="headerImg"
+            />
           </Link>
-          <Link to="/" className="link">
-            <li className="profile">Jobs</li>
-          </Link>
-        </ul>
-        <button type="button" className="logout" onClick={onLogout}>
-          Logout
-        </button>
-      </div>
+        </li>
+        <li>
+          <div className="butBox">
+            <Link to="/" className="link">
+              <AiFillHome className="mobile-home " />
+            </Link>
+            <Link to="/jobs" className="link">
+              <FaSuitcase className="mobile-suit" />
+            </Link>
+            <button type="button" className="mobile-but" onClick={onLogout}>
+              <BiExit />
+            </button>
+          </div>
+        </li>
+      </ul>
     </nav>
   )
 }
