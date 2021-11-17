@@ -41,108 +41,53 @@ const FilterIcons = props => {
 
   const salaryItem = () => {
     const {salaryChange} = props
-    const onSalary = itemValue => {
-      console.log(itemValue)
-    }
     return (
       <ul className="filterUlContainer">
-        <li className="liItem" key={salaryRangesList[0].salaryRangeId}>
-          <input
-            type="radio"
-            className="check"
-            name="salary"
-            id={salaryRangesList[0].label}
-            value={salaryRangesList[0].salaryRangeId}
-            onChange={onSalary(salaryRangesList[0].salaryRangeId)}
-          />
-          <label htmlFor={salaryRangesList[0].label}>
-            {salaryRangesList[0].label}
-          </label>
-        </li>
-        <li className="liItem" key={salaryRangesList[1].salaryRangeId}>
-          <input
-            type="radio"
-            className="check"
-            name="salary"
-            id={salaryRangesList[1].label}
-            value={salaryRangesList[1].salaryRangeId}
-          />
-          <label htmlFor={salaryRangesList[1].label}>
-            {salaryRangesList[1].label}
-          </label>
-        </li>
-        <li className="liItem" key={salaryRangesList[2].salaryRangeId}>
-          <input
-            type="radio"
-            className="check"
-            name="salary"
-            id={salaryRangesList[2].label}
-            value={salaryRangesList[2].salaryRangeId}
-          />
-          <label htmlFor={salaryRangesList[2].label}>
-            {salaryRangesList[2].label}
-          </label>
-        </li>
-        <li className="liItem" key={salaryRangesList[3].salaryRangeId}>
-          <input
-            type="radio"
-            className="check"
-            name="salary"
-            id={salaryRangesList[3].label}
-            value={salaryRangesList[3].salaryRangeId}
-          />
-          <label htmlFor={salaryRangesList[3].label}>
-            {salaryRangesList[3].label}
-          </label>
-        </li>
+        {salaryRangesList.map(itemSalary => {
+          const onSalary = () => {
+            salaryChange(itemSalary.salaryRangeId)
+          }
+          return (
+            <li className="liItem" key={itemSalary.label} onClick={onSalary}>
+              <input
+                type="radio"
+                className="check"
+                name="salary"
+                id={itemSalary.label}
+                value={itemSalary.salaryRangeId}
+              />
+              <label htmlFor={itemSalary.label}>{itemSalary.label}</label>
+            </li>
+          )
+        })}
       </ul>
     )
   }
 
   const employmentItem = () => {
-    const list = []
+    const {EmployeeChange} = props
     return (
       <ul className="filterUlContainer">
-        <li key={employmentTypesList[0].employmentTypeId} className="liItem">
-          <input
-            type="checkBox"
-            className="check"
-            id={employmentTypesList[0].label}
-          />
-          <label htmlFor={employmentTypesList[0].label} className="labelItem">
-            {employmentTypesList[0].label}
-          </label>
-        </li>
-        <li key={employmentTypesList[1].employmentTypeId} className="liItem">
-          <input
-            type="checkBox"
-            className="check"
-            id={employmentTypesList[1].label}
-          />
-          <label htmlFor={employmentTypesList[1].label} className="labelItem">
-            {employmentTypesList[1].label}
-          </label>
-        </li>
-        <li key={employmentTypesList[2].employmentTypeId} className="liItem">
-          <input
-            type="checkBox"
-            className="check"
-            id={employmentTypesList[2].label}
-          />
-          <label htmlFor={employmentTypesList[2].label} className="labelItem">
-            {employmentTypesList[2].label}
-          </label>
-        </li>
-        <li key={employmentTypesList[3].employmentTypeId} className="liItem">
-          <input
-            type="checkBox"
-            className="check"
-            id={employmentTypesList[3].label}
-          />
-          <label htmlFor={employmentTypesList[3].label} className="labelItem">
-            {employmentTypesList[3].label}
-          </label>
-        </li>
+        {employmentTypesList.map(itemEmployee => {
+          const changeEmployee = () =>
+            EmployeeChange(itemEmployee.employmentTypeId)
+          return (
+            <li
+              key={itemEmployee.employmentTypeId}
+              className="liItem"
+              onClick={changeEmployee}
+            >
+              <input
+                type="checkBox"
+                className="check"
+                id={itemEmployee.label}
+              />
+              <label htmlFor={itemEmployee.label} className="labelItem">
+                {itemEmployee.label}
+              </label>
+            </li>
+          )
+        })}
         <hr className="hr" />
       </ul>
     )

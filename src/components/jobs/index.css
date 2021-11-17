@@ -9,6 +9,14 @@
   padding-right: 60px;
 }
 
+@media screen and (max-width: 576px) {
+  .jobsContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .jobItemContainer {
   display: flex;
   flex-direction: column;
@@ -68,6 +76,12 @@
 
 .profileFilter {
   width: 25vw;
+}
+
+@media screen and (max-width: 576px) {
+  .profileFilter {
+    width: fit-content;
+  }
 }
 
 .ulContainer {

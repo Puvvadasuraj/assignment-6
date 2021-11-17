@@ -20,7 +20,7 @@ class Jobs extends Component {
     apiStatus: apiConstants.initial,
     jobsData: [],
     searchInput: '',
-    employmentType: '',
+    employmentType: [],
     salary: '',
   }
 
@@ -32,12 +32,32 @@ class Jobs extends Component {
     this.setState({searchInput: event.target.value})
   }
 
-  onEnter = event => {
+  onEnter = () => {
     this.getJobDetails()
   }
 
   changeSalary = salaryItem => {
-    this.setState({salary: salaryItem.salaryRangeId}, this.getJobDetails())
+    this.setState({salary: salaryItem}, this.getJobDetails)
+  }
+
+  changeEmployee = employeeItem => {
+    const {employmentType} = this.state
+    const findElement = employmentType.find(
+      findItem => findItem === employeeItem,
+    )
+    if (findElement === undefined) {
+      this.setState(
+        prevState => ({
+          employmentType: [...prevState.employmentType, employeeItem],
+        }),
+        this.getJobDetails,
+      )
+    } else {
+      const filterElement = employmentType.filter(
+        filterItem => filterItem !== employeeItem,
+      )
+      this.setState({employmentType: filterElement}, this.getJobDetails)
+    }
   }
 
   getJobDetails = async () => {
@@ -139,7 +159,10 @@ class Jobs extends Component {
         <div className="jobsContainer">
           <div className="profileFilter">
             <JobProfile />
-            <FilterIcons salaryChange={this.changeSalary} />
+            <FilterIcons
+              salaryChange={this.changeSalary}
+              EmployeeChange={this.changeEmployee}
+            />
           </div>
           <div className="jobItemContainer">
             <div className="searchBox">

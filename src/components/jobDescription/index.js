@@ -92,7 +92,6 @@ class JobDescription extends Component {
 
   renderSuccess = () => {
     const {details, similarJobs, skills, DetailsCompany} = this.state
-    console.log(similarJobs)
     const {description, imageUrl} = DetailsCompany
     const {
       companyLogoUrl,
@@ -134,7 +133,7 @@ class JobDescription extends Component {
           <div className="visitContainer">
             <h1>Description</h1>
             <div className="visitIconContainer">
-              <a href={companyWebsiteUrl} className="visit">
+              <a href={companyWebsiteUrl} className="visit" target="blank">
                 Visit
               </a>
               <FiExternalLink />
