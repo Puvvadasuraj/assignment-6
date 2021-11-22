@@ -24,6 +24,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: center;
   padding: 25px;
 }
 
@@ -69,4 +70,16 @@
     padding: 10px;
     padding-top: 10px;
   }
-} ;
+}
+
+.signUp {
+  color: #f8fafc;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.linkSign {
+  text-decoration: none;
+}

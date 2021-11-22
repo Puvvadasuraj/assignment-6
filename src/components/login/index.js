@@ -1,6 +1,7 @@
 import {Component} from 'react'
 import Cookies from 'js-cookie'
-import {Redirect} from 'react-router-dom'
+import {Redirect, Link} from 'react-router-dom'
+import SignUp from '../SignUp'
 import './index.css'
 
 class Login extends Component {
@@ -84,6 +85,9 @@ class Login extends Component {
               Login
             </button>
             {errorPresent && <p className="errorMsg">*{errorMsg}</p>}
+            <Link to="/signup" className="linkSign">
+              <p className="signUp">Sign Up??</p>
+            </Link>
           </form>
         </div>
       </div>
